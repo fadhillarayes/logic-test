@@ -1,15 +1,62 @@
 function checkVocal(string) {
   // Start Code Here
-  const vocal = "aiueo";
-  var consonant = [];
-  for (var i = 0; i < string.length; i++) {
-    if (vocal.includes(string[i]) && !vocal.includes(string[i])) {
+  var count = 0;
+  var vowel = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
+  var consonant = [
+    "b",
+    "c",
+    "d",
+    "f",
+    "g",
+    "h",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+    "B",
+    "C",
+    "D",
+    "F",
+    "G",
+    "H",
+    "J",
+    "K",
+    "L",
+    "M",
+    "N",
+    "P",
+    "Q",
+    "R",
+    "S",
+    "T",
+    "V",
+    "W",
+    "X",
+    "Y",
+    "Z",
+  ];
+  for (i = 0; i < string.length; i++) {
+    if (consonant.includes(string[i]) && vowel.includes(string[i])) {
+      // count++;
       console.log("false");
-    } else {
-      return true;
+    } else if (consonant.includes(string[i])) {
+      console.log("false");
+    } else if (vowel.includes(string[i])) {
+      console.log("true");
     }
   }
-  return vocal;
+  return count;
 }
 
 console.log(checkVocal("iueoaAAaAA")); //output: true
